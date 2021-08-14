@@ -1,0 +1,4 @@
+<launch>
+    <node name="tf_server" pkg="human_baxter_servers" type="tf_server" output="screen"/>
+    <node name="moveit_controller" pkg="human_baxter_servers" type="moveit_controller" output="screen"/>
+</launch>
