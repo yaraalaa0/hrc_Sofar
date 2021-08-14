@@ -4,12 +4,16 @@
 
 In order to launch the system:
 
-First, clone all the packages of this repository in your ROS workspace src folder.
+First, clone all the packages of this repository in the src folder of your ROS workspace.
 
-Then, source the workspace.
+Then, in the root of your workspace, run:
+~~~
+source devel/setup.bash
+~~~
 
-I the root of your workspace run:
+Then,
 ~~~
 catkin_make
 ~~~
+
 
