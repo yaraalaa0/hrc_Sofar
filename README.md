@@ -61,7 +61,7 @@ roslaunch human_baxter_servers servers_cartesian.launch
 
 ### 3- Fast cube collection using two arms simultaneously (needs improvement)
 
-The moveit controller uses normal planning to pose target for all the four trajectories (rarely, it leads to non-straight motions in the 2nd and 3rd trajectories). The task manager only uses the two arms simultaneously to move the cubes. This leads to very fast behaviour. However, sometimes, the two arms collide with each othe in the middle placement. A form of arm collision avoidance needs to be developed.
+The task manager uses the two arms simultaneously to move the cubes. This leads to very fast behaviour. However, sometimes, the two arms collide with each other in the middle placement. A form of arm collision avoidance needs to be developed.
 
 - Start the ROS-Unity communication and the task manager node:
 
@@ -78,8 +78,6 @@ roslaunch human_baxter_servers servers.launch
 ~~~
 
 ### 4- Slow cube collection using two arms simultaneously (needs improvement)
-
-The slow cube collection behaviour comes from using computeCartesian() function for planning the second and third trajectories. The task manager only uses the two arms simultaneously to move the cubes.
 
 - Start the ROS-Unity communication and the task manager node:
 ~~~
