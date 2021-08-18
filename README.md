@@ -5,6 +5,7 @@ This project is composed of the design and implementation of a software architec
 To perceive the locations of objects in the environment, baxter has access to the transformations of each object published by Unity. The movement of each arm is achieved by publishing a 4-trajectory message to Unity. The four trajectories in each message correspond to the following movements, respectively: go above cube’s location (the arm’s eef opens), go down to the cube’s location (the eef closes and picks the cube), go up, then, go to the target location (the eef releases the cube). The final objective is to move all blue cubes in the environment to the blue box in the fastest time possible and without collisions. 
 
 The overall system architecture is described in the UML diagram:
+
 ![alt text](https://github.com/yaraalaa0/hrc_sofar/blob/main/HRC8_UML_FINAL.png?raw=true)
 
 -----------------------------------------------------------------------------------------
