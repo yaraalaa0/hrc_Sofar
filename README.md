@@ -16,7 +16,7 @@ For launching the system:
 source devel/setup.bash
 ~~~
 
-- build the workspace:
+- Then, build the workspace:
 ~~~
 catkin_make
 ~~~
@@ -25,7 +25,7 @@ catkin_make
 
 ### 1- Fast cube collection using one arm at a time (Recommended)
 
-The moveit controller uses normal planning to pose target for all the four trajectories (rarely, it leads to non-straight motions in the 2nd and 3rd trajectories). The task manager only uses one arm at a time to move the cubes.
+The moveit controller uses normal planning to pose targets for all the four trajectories. In some rare cases, it leads to non-straight motions of the eef in the 2nd and 3rd trajectories. The task manager only uses one arm at a time to move the cubes.
 
 - Start the ROS-Unity communication and the task manager node:
 
