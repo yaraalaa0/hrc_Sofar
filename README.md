@@ -12,6 +12,11 @@ The overall system architecture is described in the UML diagram:
 
 -----------------------------------------------------------------------------------------
 
+Installing the dependencies:
+
+- Download the package baxter_common from: https://github.com/RethinkRobotics/baxter_common and extract it in the src folder of your ROS workspace.
+- Download the package moveit_robots from: https://github.com/ros-planning/moveit_robots and extract it in the src folder of your ROS workspace.
+
 For launching the system:
 
 - First, clone all the packages of this repository in the src folder of your ROS workspace.
