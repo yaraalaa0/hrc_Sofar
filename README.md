@@ -39,7 +39,7 @@ catkin_make
 
 ## There are 4 ways to launch the system:
 
-### 1- Fast cube collection using one arm at a time (Recommended)
+### 1- Fast cube collection using one arm at a time (Recommended for Simulation)
 
 The moveit controller uses normal planning to pose targets for all the four trajectories. In some rare cases, it leads to non-straight motions of the eef in the 2nd and 3rd trajectories. The task manager only uses one arm at a time to move the cubes.
 
@@ -57,7 +57,7 @@ roslaunch human_baxter_collaboration human_baxter_one_hand.launch
 roslaunch human_baxter_servers servers.launch
 ~~~
 
-### 2- Slow cube collection using one arm at a time
+### 2- Slow cube collection using one arm at a time (Recommended for Hardware)
 
 The slow cube collection behaviour comes from using computeCartesian() function for planning the second and third trajectories. This is done to force the baxter's eef to go in straight line while going down to pick the cube and going up after picking it. 
 
