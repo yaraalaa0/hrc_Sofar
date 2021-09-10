@@ -395,6 +395,21 @@ bool callback_pickplace(human_baxter_servers::PickPlace::Request &req, human_bax
       res.done = false;
       return true;
     }
+    //////////////////////ADDED FOR HARDWARE//////////////////////////////////////
+    update_joint_positions();
+    start_state_r.setJointGroupPositions(joint_model_group_r, joint_group_positions);
+    
+    ///**///
+    //5th trajectory
+    move_group_interface_r->setStartState(start_state_r);
+    move_group_interface_r->setJointValueTarget(init_baxter_state_r.joint_state.position);
+    
+    success_plan = plan_R();
+    if(success_plan == false){
+      res.done = false;
+      return true;
+    }
+    /////////////////////////////////////////////////////////////////////////////////
     
   }
   else{
@@ -465,7 +480,22 @@ bool callback_pickplace(human_baxter_servers::PickPlace::Request &req, human_bax
       res.done = false;
       return true;
     }
-  
+    
+    //////////////////////ADDED FOR HARDWARE//////////////////////////////////////
+    update_joint_positions();
+    start_state_l.setJointGroupPositions(joint_model_group_l, joint_group_positions);
+    
+    ///**///
+    //5th trajectory
+    move_group_interface_l->setStartState(start_state_l);
+    move_group_interface_l->setJointValueTarget(init_baxter_state_l.joint_state.position);
+    
+    success_plan = plan_L();
+    if(success_plan == false){
+      res.done = false;
+      return true;
+    }
+    /////////////////////////////////////////////////////////////////////////////////
   
   }
   
